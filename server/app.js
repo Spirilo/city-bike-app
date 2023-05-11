@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 
 mongoose.connect(config.MONGODB_URI)
   .then(() => console.log('Connection OK'))
-  .catch((error) => console.log('Erro connecting to MongoDB', error.message))
+  .catch((error) => console.log('Error connecting to MongoDB', error.message))
 
 app.use(express.json())
 
