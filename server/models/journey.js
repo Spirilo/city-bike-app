@@ -4,11 +4,12 @@ const journeySchema = new mongoose.Schema({
     departure: Date,
     return: Date,
     departureStationId: Number,
-    departureStatinName: String,
+    departureStationName: String,
     returnStationId: Number,
-    returnStatinName: String,
+    returnStationName: String,
     distance: Number,
     duration: Number
 })
+
 
 module.exports = mongoose.model('Journey', journeySchema)
