@@ -3,7 +3,7 @@ const Journey = require('../models/journey')
 
 journeysRouter.get('/', async (req, res) => {
   console.log('Getting data')
-  let journeys = await Journey.find({}).limit(1000)
+  let journeys = await Journey.find({}).limit(100)
   res.json(journeys)
 })
 
