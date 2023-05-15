@@ -3,7 +3,9 @@ import axios from "axios"
 
 export function StationList() {
   const [stations, setStations] = useState([])
+  const [station, setStation] = useState({})
 
+  console.log(station)
   useEffect(() => {
     const fetch = async () => {
       const res = await axios.get("http://localhost:3001/api/stations")
@@ -14,26 +16,17 @@ export function StationList() {
     console.log('Data fetch done')
   }, [])
 
+  function singleView(s) {
+    setStation(s)
+  }
+
   let rows = stations.map(s => 
-    <tbody key={s.id}>
-      <tr>
-        <td>{s.ID}</td>
-        <td>{s.Nimi}</td>
-        <td>{s.Osoite}</td>
-      </tr>
-    </tbody>)
+      <li>{s.Nimi} <input type="button" value="Click for info" onClick={() => singleView(s)} /> </li>)
   return(
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Station id</th>
-            <th>Station name</th>
-            <th>Station address</th>
-          </tr>
-        </thead>
+      <ul>
         {rows}
-      </table>
+      </ul>
     </div>
   )
 }
