@@ -3,9 +3,8 @@ const csv = require('csvtojson')
 const mongoose = require('mongoose')
 const config = require('./utils/config')
 const _ = require('lodash')
-require('dotenv').config()
 
-const paths = process.env.DATA_CSV.split(',')
+const paths = config.DATA.split(',')
 console.log(paths)
 
 async function cycle(paths) {
