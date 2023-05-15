@@ -15,20 +15,24 @@ export function JourneyList() {
   }, [])
 
   let rows = journeys.map(j => 
-    <tbody>
-      <td>{j.departureStationName}</td>
-      <td>{j.returnStationName}</td>
-      <td>{j.distance / 1000}</td>
-      <td>{j.duration / 60}</td>
+    <tbody key={j.id}>
+      <tr>
+        <td>{j.departureStationName}</td>
+        <td>{j.returnStationName}</td>
+        <td>{j.distance / 1000}</td>
+        <td>{j.duration / 60}</td>
+      </tr>
     </tbody>)
   return(
     <div>
       <table>
         <thead>
-          <th>Departure station</th>
-          <th>Return station</th>
-          <th>Distance (km)</th>
-          <th>Duration(min)</th>
+          <tr>
+            <th>Departure station</th>
+            <th>Return station</th>
+            <th>Distance (km)</th>
+            <th>Duration(min)</th>
+          </tr>
         </thead>
         {rows}
       </table>
