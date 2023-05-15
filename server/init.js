@@ -5,7 +5,8 @@ const config = require('./utils/config')
 const _ = require('lodash')
 require('dotenv').config()
 
-const paths = [process.env.DATA_CSV]
+const paths = process.env.DATA_CSV.split(',')
+console.log(paths)
 
 async function cycle(paths) {
   for (const path of paths) {
