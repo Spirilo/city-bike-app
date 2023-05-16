@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react"
-import axios from "axios"
+import journeyService from "../services/journeyService"
 
 export function JourneyList() {
   const [journeys, setJourneys] = useState([])
 
   useEffect(() => {
-    const fetch = async () => {
-      const res = await axios.get("http://localhost:3001/api/journeys")
-      console.log(res)
-      setJourneys(res.data)
-    }
-    fetch()
-    console.log('Data fetch done')
+    journeyService.getAll().then(r => setJourneys(r))
   }, [])
 
   let rows = journeys.map(j => 

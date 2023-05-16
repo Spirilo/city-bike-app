@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import JourneyList from "../features/journeys";
-import StationList from "../features/stations";
+import JourneyList from "../components/journeys";
+import StationList from "../components/stations";
 
 export function FirstPage() {
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import stationService from "../services/stationService"
 
 export function StationList() {
   const [stations, setStations] = useState([])
@@ -7,13 +8,7 @@ export function StationList() {
 
   console.log(station)
   useEffect(() => {
-    const fetch = async () => {
-      const res = await axios.get("http://localhost:3001/api/stations")
-      console.log(res)
-      setStations(res.data)
-    }
-    fetch()
-    console.log('Data fetch done')
+    stationService.getAll().then(s => setStations(s))
   }, [])
 
   function singleView(s) {
@@ -21,7 +16,7 @@ export function StationList() {
   }
 
   let rows = stations.map(s => 
-      <li>{s.Nimi} <input type="button" value="Click for info" onClick={() => singleView(s)} /> </li>)
+      <li key={s.id} >{s.Nimi} <input type="button" value="Click for info" onClick={() => singleView(s)} /> </li>)
   return(
     <div>
       <ul>
