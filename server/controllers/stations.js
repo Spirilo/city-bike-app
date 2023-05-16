@@ -9,6 +9,7 @@ stationsRouter.get('/', async (req, res) => {
 
 stationsRouter.get('/:id', async (req, res) => {
     let station = await Station.findById(req.params.id)
+    console.log(station)
     res.json(station)
 })
 

@@ -7,6 +7,13 @@ const getAll = async () => {
     return res.data
 }
 
+const get = async (id) => {
+    console.log(id)
+    const res = await axios.get(`${url}/${id}`)
+    return res.data
+}
+
 export default {
-    getAll
+    getAll,
+    get
 }

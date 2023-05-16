@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import stationService from "../services/stationService"
+import { useNavigate } from "react-router-dom"
 
 export function StationList() {
   const [stations, setStations] = useState([])
   const [station, setStation] = useState({})
+
+  const navigate = useNavigate()
+  
 
   console.log(station)
   useEffect(() => {
@@ -13,6 +17,7 @@ export function StationList() {
 
   function singleView(s) {
     setStation(s)
+    navigate(`/stations/${s.id}`)
   }
 
   let rows = stations.map(s => 
