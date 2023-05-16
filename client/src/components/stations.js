@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 
 export function StationList() {
   const [stations, setStations] = useState([])
-  const [station, setStation] = useState({})
 
   const navigate = useNavigate()
   
@@ -16,7 +15,6 @@ export function StationList() {
   }, [])
 
   function singleView(s) {
-    setStation(s)
     navigate(`/stations/${s.id}`)
   }
 
