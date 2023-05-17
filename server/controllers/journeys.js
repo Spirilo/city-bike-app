@@ -4,7 +4,7 @@ const Journey = require('../models/journey')
 //get all journeys
 journeysRouter.get('/', async (req, res) => {
   console.log('Getting data')
-  let journeys = await Journey.find({}).limit(100)
+  let journeys = await Journey.find({}).limit(1000)
   res.json(journeys)
 })
 
