@@ -6,23 +6,29 @@ export function SingleStation() {
     const [station, setStation] = useState([])
     const [departures, setDepartures] = useState(0)
     const [arrivals, setArrivals] = useState(0)
-
+    const [loading, setLoading] = useState(true)
 
 
     const id = useParams().id
     const navigate = useNavigate()
-    console.log(id)
-    console.log(station)
 
     useEffect(() => {
-      console.log(id)
-      stationService.get(id).then(s => {
-        console.log(s)
-        setStation(s.station)
-        setDepartures(s.depStations)
-        setArrivals(s.retStations)
-      })
+      const fetch = async () => {
+        const data = await stationService.get(id)
+        console.log(data)
+        setStation(data.station)
+        setDepartures(data.depStations)
+        setArrivals(data.retStations)
+        setLoading(false)
+      }
+      fetch()
     }, [])
+
+    if(loading) {
+      return (
+        <h2>Loading....</h2>
+      )
+    }
 
     return (
       <div> 

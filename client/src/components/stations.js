@@ -8,8 +8,6 @@ export function StationList() {
 
   const navigate = useNavigate()
   
-
-  console.log(station)
   useEffect(() => {
     stationService.getAll().then(s => setStations(s))
   }, [])
