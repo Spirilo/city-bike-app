@@ -15,7 +15,7 @@ This is the Solita Dev Academy pre-assignment, repo is still updated daily to fi
 
 - [x] List journeys
 - [x] For each journey show departure and return stations, covered distance in kilometers and duration in minutes
-- [ ] Pagination
+- [x] Pagination
 - [ ] Ordering per column
 - [ ] Searching
 - [ ] Filtering
@@ -23,7 +23,7 @@ This is the Solita Dev Academy pre-assignment, repo is still updated daily to fi
 ### Station list view
 
 - [x] List all the stations
-- [ ] Pagination
+- [x] Pagination
 - [ ] Searching
 
 ### Single station view
