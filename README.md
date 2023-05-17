@@ -1,5 +1,5 @@
 # city-bike-app
-Helsinki city bike app.
+Helsinki city bike app.   
 This is the Solita Dev Academy pre-assignment, repo is still updated daily to finish rest of the tasks
 
 ## Features
