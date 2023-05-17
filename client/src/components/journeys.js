@@ -7,6 +7,7 @@ export function JourneyList() {
   const [currentPage, setCurrentPage] = useState(1)
   const [journeysPerPage, setJourneysPerPage] = useState(12)
 
+  console.log(journeys)
   useEffect(() => {
     journeyService.getAll().then(r => setJourneys(r))
   }, [])
@@ -40,8 +41,8 @@ export function JourneyList() {
         {rows}
       </table>
       <Pagination 
-        journeysPerPage={journeysPerPage} 
-        totalJourneys={journeys.length}
+        dataPerPage={journeysPerPage} 
+        totalData={journeys.length}
         currentPage={currentPage}
         setPage={paginate} />
     </div>

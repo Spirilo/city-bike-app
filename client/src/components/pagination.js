@@ -1,9 +1,9 @@
 import React from "react"
 
-export function Pagination({journeysPerPage, totalJourneys, currentPage, setPage}) {
+export function Pagination({dataPerPage, totalData, currentPage, setPage}) {
   const pageNumbers = []
 
-  for (let i = 1; i <= Math.ceil(totalJourneys / journeysPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalData / dataPerPage); i++) {
     pageNumbers.push(i)
   }
 
