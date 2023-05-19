@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "react-bootstrap/Button"
 
 export function Pagination({dataPerPage, totalData, currentPage, setPage}) {
   const pageNumbers = []
@@ -10,13 +11,13 @@ export function Pagination({dataPerPage, totalData, currentPage, setPage}) {
   return (
     <div>
     {currentPage !== 1 ? 
-      <button onClick={() => setPage(currentPage - 1)} >Edellinen sivu</button>
+      <Button onClick={() => setPage(currentPage - 1)} >Previous page</Button>
     :
       <></>
     }
       {currentPage} / {pageNumbers.length}
     {currentPage !== pageNumbers.length ?
-      <button onClick={() => setPage(currentPage + 1)} >Seuraava sivu</button>
+      <Button onClick={() => setPage(currentPage + 1)} >Next page</Button>
     :
       <></>
     }

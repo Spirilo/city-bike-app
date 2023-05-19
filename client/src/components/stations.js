@@ -3,6 +3,7 @@ import axios from "axios"
 import stationService from "../services/stationService"
 import { useNavigate } from "react-router-dom"
 import Pagination from "./pagination"
+import Button from "react-bootstrap/Button"
 
 export function StationList() {
   const [stations, setStations] = useState([])
@@ -26,10 +27,10 @@ export function StationList() {
   const paginate = number => setCurrentPage(number)
 
   let rows = currentStations.map(s => 
-      <li key={s.id} >{s.Nimi} <input type="button" value="Click for info" onClick={() => singleView(s)} /> </li>)
+      <li key={s.id} >{s.Nimi} <Button variant="outline-dark" onClick={() => singleView(s)}>Click for info</Button> </li>)
   return(
     <div>
-      <ul>
+      <ul className="d-grid gap-2">
         {rows}
       </ul>
       <Pagination

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import stationService from "../services/stationService"
 import { useNavigate, useParams } from "react-router-dom"
+import Button from "react-bootstrap/Button"
 
 export function SingleStation() {
     const [station, setStation] = useState([])
@@ -35,11 +36,11 @@ export function SingleStation() {
         <div>
           <h2>{station.Name} ({station.Namn})</h2>
           <h3>{station.Osoite}</h3>
-          <h3>Lähdöt asemalta: {departures}</h3>
-          <h3>Saapuneet asemalle: {arrivals}</h3>
+          <h3>Departures from station: {departures}</h3>
+          <h3>Arrivals to station: {arrivals}</h3>
         </div>
         <div>
-          <button onClick={() => navigate(-1)} >Palaa</button>
+          <Button variant="warning" onClick={() => navigate(-1)}>Palaa</Button>
         </div>
       </div>
       
