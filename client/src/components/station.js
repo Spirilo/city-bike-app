@@ -40,7 +40,7 @@ export function SingleStation() {
           <h3>Arrivals to station: {arrivals}</h3>
         </div>
         <div>
-          <Button variant="warning" onClick={() => navigate(-1)}>Palaa</Button>
+          <Button variant="warning" onClick={() => navigate(-1)}>Return</Button>
         </div>
       </div>
       
