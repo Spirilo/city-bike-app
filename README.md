@@ -1,6 +1,14 @@
 # city-bike-app
 Helsinki city bike app.   
-This is the Solita Dev Academy pre-assignment, repo is still updated daily to finish rest of the tasks
+This is the Solita Dev Academy pre-assignment    
+
+## How to run
+- clone the repo
+`git clone https://github.com/Spirilo/city-bike-app.git`
+- install dependencies
+`cd city-bike-app/client`
+`npm i`
+
 
 ## Features
 
