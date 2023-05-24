@@ -8,7 +8,14 @@ This is the Solita Dev Academy pre-assignment
 - install dependencies   
 `cd city-bike-app/client`   
 `npm i`
-
+- open other cmd for server   
+`cd city-bike-app/server`   
+- build and run backend from dockerimage
+- before build add .env file with data I give to server dir!!
+`docker build . -t bikeapp`    
+`docker run -dp 3001:3001 bikeapp`
+- run the frontend in client dir    
+`npm start`
 
 ## Features
 
