@@ -3,6 +3,8 @@ Helsinki city bike app.
 This is the Solita Dev Academy pre-assignment    
 
 ## How to run
+Database is already initialized with init.js, so you only need to follow these instructions to run the app locally
+
 - clone the repo   
 `git clone https://github.com/Spirilo/city-bike-app.git`
 - install dependencies   
