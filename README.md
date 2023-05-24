@@ -11,7 +11,7 @@ This is the Solita Dev Academy pre-assignment
 - open other cmd for server   
 `cd city-bike-app/server`   
 - build and run backend from dockerimage
-- before build add .env file with data I give to server dir!!
+- before build add .env file with data I give to server dir!!    
 `docker build . -t bikeapp`    
 `docker run -dp 3001:3001 bikeapp`
 - run the frontend in client dir    
