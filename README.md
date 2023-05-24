@@ -3,10 +3,10 @@ Helsinki city bike app.
 This is the Solita Dev Academy pre-assignment    
 
 ## How to run
-- clone the repo
+- clone the repo   
 `git clone https://github.com/Spirilo/city-bike-app.git`
-- install dependencies
-`cd city-bike-app/client`
+- install dependencies   
+`cd city-bike-app/client`   
 `npm i`
 
 
